@@ -6,43 +6,16 @@ class LettersPage extends DefaultPage {
 	}
 
 	get locators () {
-		const container = '[data-qa-id="dataset-letters"]';
+		const container = '.dataset-letters';
 
 		return {
-			container,
-			letterBySubject: (subject) => {
-				// subject = subject === '' ? '<Без темы>' : subject.replace('"', '\\"');
-
-				return `${this.locators.container} [data-qa-id="letter-item:subject:${subject}"]`;
-			}
+			container
 		}
 	}
 
-	/**
-	 * Проверяет есть ли письмо с темой
-	 *
-	 * @param {string} subject
-	 * @param {boolean} reverse
-	 * @returns {boolean}
-	 */
-	hasLetterBySubject (subject, reverse = false) {
-		try {
-			this.page.waitForVisible(this.locators.letterBySubject(subject), null, reverse);
-
-			return true;
-		} catch (err) {
-			return false;
-		}
+	waitForDatasetLetters() {
+		this.page.waitForVisible(this.locators.container);
 	}
-
-	/**
-	 * Открыть письмо по теме
-	 * @param  {string} subject
-	 */
-	openBySubject (subject) {
-		this.page.click(this.locators.letterBySubject(subject));
-	}
-
 }
 
 export default new LettersPage();

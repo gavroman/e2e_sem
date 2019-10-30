@@ -2,14 +2,14 @@ import DefaultPage from '../default';
 
 class FoldersPage extends DefaultPage {
 	constructor() {
-		super('letters')
+		super('folders')
 	}
 
 	get locators() {
-		const container = '[data-qa-id="sidebar"] [data-qa-id="folders"]';
+		const container = '.sidebar .nav-folders';
 		return {
 			container,
-			folderByName: (folderName) => container + ` [data-qa-id="folder-name:name:${folderName}"]`
+			folderByName: (folderName) => container + ` a[href="${folderName}"]`
 		}
 	}
 

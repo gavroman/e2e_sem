@@ -6,11 +6,9 @@ class LettersSteps extends DefaultSteps {
 		super(page);
 	}
 
-	openBySubject(subject) {
-		this.page.hasLetterBySubject(subject);
-		this.page.openBySubject(subject);
+	waitForList() {
+		this.page.waitForDatasetLetters();
 	}
-
 }
 
 export default new LettersSteps();
