@@ -6,7 +6,7 @@
 
 ## Запуск тестов
 
-`npm test`
+`LOGIN=<your_test_email> PASSWORD=<your_password> npm test`
 
 ## Allure-репорт
 
