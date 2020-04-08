@@ -15,6 +15,8 @@
 
 ## Запуск тестов
 
+В файле package.json замените урл в команде `"test": "wdio --baseUrl='https://octavius.mail.ru'"` на урл своего проекта.
+
 `LOGIN=<your_test_email> PASSWORD=<your_password> npm test`
 
 **Не храните логин и пароль в git**
