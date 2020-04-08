@@ -1,9 +1,5 @@
 import account from '../../steps/account';
-import folders from '../../steps/sidebar/folders';
 import letters from '../../steps/letters/index';
-import {foldersHref} from '../../store/index';
-
-const FOLDER = foldersHref.sent;
 
 // пример теста
 describe('test id', () => {
@@ -15,6 +11,6 @@ describe('test id', () => {
 		account.login();
 
 		letters.waitForList();
-		folders.clickFolderByName(FOLDER);
+		letters.openLetter();
 	});
 });

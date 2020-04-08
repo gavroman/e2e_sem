@@ -9,6 +9,11 @@ class LettersSteps extends DefaultSteps {
 	waitForList() {
 		this.page.waitForContainer();
 	}
+
+	openLetter () {
+		this.page.clickLetter();
+		this.page.checkLetterContent();
+	}
 }
 
 export default new LettersSteps();
