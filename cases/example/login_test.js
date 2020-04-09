@@ -9,6 +9,7 @@ describe('test id', () => {
 	it('Авторизоваться и открыть первое письмо на странице', () => {
 		account.open('https://account.mail.ru');
 		account.login();
+		browser.debug();
 
 		letters.waitForList();
 		letters.openLetter();
