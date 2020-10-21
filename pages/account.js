@@ -2,13 +2,13 @@ import DefaultPage from './default';
 
 class AccountPage extends DefaultPage {
 	constructor() {
-		super('account', '[data-test-id=login-app-ready]')
+		super('account', '[data-test-id=login-app-read]')
 	}
 
 	get locators() {
 		return {
-			login: 'input[name="Login"]',
-			password: 'input[name="Password"]',
+			login: 'input[name="username"]',
+			password: 'input[name="password"]',
 			nextButton: '[data-test-id="next-button"]',
 			submitButton: '[data-test-id="submit-button"]',
 		}
